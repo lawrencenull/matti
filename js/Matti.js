@@ -15,19 +15,19 @@ var Matti = function(){
 	* Gets the QuestionBank.json file.
 	*/
 	function getQuestionBankData(){
-        var xhr;
+        var xhr, versions, i;
 
         if(typeof XMLHttpRequest !== 'undefined'){
         	xhr = new XMLHttpRequest();
         }
         else {
-            var versions = ["MSXML2.XmlHttp.5.0", 
-                            "MSXML2.XmlHttp.4.0",
-                            "MSXML2.XmlHttp.3.0", 
-                            "MSXML2.XmlHttp.2.0",
-                            "Microsoft.XmlHttp"]
+            versions = ["MSXML2.XmlHttp.5.0", 
+                        "MSXML2.XmlHttp.4.0",
+                        "MSXML2.XmlHttp.3.0", 
+                        "MSXML2.XmlHttp.2.0",
+                        "Microsoft.XmlHttp"]
  
-             for(var i = 0, len = versions.length; i < len; i++) {
+             for(i = 0, len = versions.length; i < len; i++) {
                 try {
                     xhr = new ActiveXObject(versions[i]);
                     break;
@@ -77,13 +77,13 @@ var Matti = function(){
 	*/
 	function parseQueryString(){
 		log('parseQueryString invoked...');
-		var rawQueryString = window.location.search;
-		var queryStringPrefixLength = rawQueryString.indexOf('q=') + 2;
-		var rawParamArray = unescape(rawQueryString).substring(queryStringPrefixLength, rawQueryString.length).split('+');
-		var queryParamsArray = rawParamArray.map(function(n){
-			return n.replace(/[\'\?\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase();
-		});
-		var questionCallback;
+		var rawQueryString = window.location.search,
+			queryStringPrefixLength = rawQueryString.indexOf('q=') + 2,
+			rawParamArray = unescape(rawQueryString).substring(queryStringPrefixLength, rawQueryString.length).split('+'),
+			queryParamsArray = rawParamArray.map(function(n){
+				return n.replace(/[\'\?\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase();
+			}),
+			questionCallback;
 
 		if(queryParamsArray.toString().length > 1){
 			if(checkForCursing(queryParamsArray) == true){
@@ -104,8 +104,10 @@ var Matti = function(){
 	* @param arr - An array containing the individual element of the query string.
 	*/
 	function checkForCursing(arr){
-		for(var i = 0; i < arr.length; i++){
-			for(var j = 0; j < curseBank.length; j++){
+		var i, j;
+
+		for(i = 0; i < arr.length; i++){
+			for(j = 0; j < curseBank.length; j++){
 				if(arr[i] == curseBank[j]){
 					return true;
 				}
@@ -121,10 +123,11 @@ var Matti = function(){
 	*/
 	function handleQuestion(arr){
 		log('handleQuestion invoked...');
-		var questionObject = questionBank;
-		var returnValue;
+		var questionObject = questionBank,
+			returnValue,
+			i;
 
-		for(var i = 0; i < arr.length; i++){
+		for(i = 0; i < arr.length; i++){
 			var currentVal = arr[i];
 			try{questionObject = questionObject[currentVal];}
 			catch(e){questionObject = handleUnknownQuestion(); break;}
@@ -144,8 +147,9 @@ var Matti = function(){
 	*/
 	function handleUnknownQuestion(){
 		log('handleUnknownQuestion invoked...');
-		var unknownResponses = questionBank.unknown;
-		var randomResponse = Math.floor((Math.random() * unknownResponses.length) + 0);
+		var unknownResponses = questionBank.unknown,
+			randomResponse = Math.floor((Math.random() * unknownResponses.length) + 0);
+		
 		return unknownResponses[randomResponse];
 	}
 
@@ -154,8 +158,9 @@ var Matti = function(){
 	*/
 	function handleCurseQuestion(){
 		log('handleCurseQuestion invoked...');
-		var curseResponses = questionBank.curse;
-		var randomResponse = Math.floor((Math.random() * curseResponses.length) + 0);
+		var curseResponses = questionBank.curse,
+			randomResponse = Math.floor((Math.random() * curseResponses.length) + 0);
+		
 		return curseResponses[randomResponse];
 	}
 
@@ -172,9 +177,10 @@ var Matti = function(){
 	*/
 	function showTime(){
 		log("showTime invoked...");
-		var today = new Date();
-	    var h = today.getHours();
-	    var m = today.getMinutes();
+		var today = new Date(),
+			h = today.getHours(),
+			m = today.getMinutes();
+		
 		return h + ":" + m;
 	}
 
@@ -183,10 +189,10 @@ var Matti = function(){
 	*/
 	function showDate(){
 		log("showDate invoked...");
-		var today = new Date();
-		var dd = today.getDate();
-		var mm = today.getMonth() + 1;
-		var yyyy = today.getFullYear();
+		var today = new Date(),
+			dd = today.getDate(),
+			mm = today.getMonth() + 1,
+			yyyy = today.getFullYear();
 
 		return mm + '/' + dd + '/' + yyyy;
 	}
