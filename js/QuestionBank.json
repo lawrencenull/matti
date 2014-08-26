@@ -6,6 +6,18 @@
 		"You're lucky I'm not human!",
 		"Say that again to me, I dare you!"
 	],
+	"hello":[
+		"How you doin'?",
+		"Whaaazaaaaaaaaahhhh....",
+		"hola!",
+		"Yo."
+	],
+	"hey":[
+		"How you doin'?",
+		"Whaaazaaaaaaaaahhhh....",
+		"hola!",
+		"Yo."
+	],
 	"how":{
 		"old":{
 			"are":{
@@ -14,6 +26,9 @@
 			"am" : {
 				"i" : "How am I supposed to know? It's YOUR age!!"
 			}
+		},
+		"are":{
+			"you" : "Fine, thank you."
 		}
 	},
 	"i":{

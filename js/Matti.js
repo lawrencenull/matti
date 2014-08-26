@@ -133,9 +133,18 @@ var Matti = function(){
 			catch(e){questionObject = handleUnknownQuestion(); break;}
 		}
 
+		console.log(typeof questionObject);
+
 		switch(typeof questionObject){
 			case "string": returnValue = questionObject; break;
-			case "object" : returnValue = eval(questionObject[1] + "()"); break;
+			case "object" : returnValue = (function(){
+				if(questionObject[0] != "function"){
+					return handleRandomQuestion(questionObject);
+				}
+				else{
+					return eval(questionObject[1] + "()");
+				}
+			})(); break;
 			default: returnValue = handleUnknownQuestion();
 		}
 
@@ -151,6 +160,16 @@ var Matti = function(){
 			randomResponse = Math.floor((Math.random() * unknownResponses.length) + 0);
 		
 		return unknownResponses[randomResponse];
+	}
+
+	/**
+	* For none-specific responses, pass back a random one.
+	*/
+	function handleRandomQuestion(arr){
+		log('handleRandomQuestion invoked...');
+		var randomResponse = Math.floor((Math.random() * arr.length) + 0);
+		
+		return arr[randomResponse];
 	}
 
 	/**
