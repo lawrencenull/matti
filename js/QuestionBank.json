@@ -1,0 +1,138 @@
+{
+	"curse":[
+		"You kiss your mother with that mouth?",
+		"Why do you think that kind of language is appropriate?",
+		"Even though I'm a bot, I have standards!",
+		"You're lucky I'm not human!",
+		"Say that again to me, I dare you!"
+	],
+	"how":{
+		"old":{
+			"are":{
+				"you" : "That's really none of your business."
+			},
+			"am" : {
+				"i" : "How am I supposed to know? It's YOUR age!!"
+			}
+		}
+	},
+	"i":{
+		"am":{
+			"sorry" : "That's ok.  We all make mistakes.",
+			"a":{
+				"jerk" : "Let's not be harsh on ourselves.",
+				"genius" : "Well... that's a bit presumptuous."
+			},
+			"sad" : "Please tell me more.  I am listening.",
+			"happy" : "That's nice to hear."
+		}
+	},
+	"im":{
+		"sorry" : "That's ok.  We all make mistakes.",
+		"a":{
+			"jerk" : "Let's not be harsh on ourselves.",
+			"genius" : "Well... that's a bit presumptuous."
+		},
+		"sad" : "Please tell me more.  I am listening.",
+		"happy" : "That's nice to hear."	
+	},
+	"unknown":[
+		"I'm sorry, I can't help you with that.",
+		"I honestly don't know what you're asking me.",
+		"Why not try using Google?",
+		"I'm not perfect, but clearly neither are you.",
+		"Um, WHAT??",
+		"Yeah... I'm going to have to go ahead and ask you to rephrase that.",
+		"Do you even speak English bro?",
+		"Learn. To. Spell."
+	],
+	"what":{
+		"is":{
+			"your":{
+				"name" : "My name is Matti.",
+				"age" : "Honestly you think I would tell you that??",
+				"purpose" : "If you don't know, I won't tell you.",
+				"major":{
+					"malfunction" : "Yeah, I'm not even going there."
+				}
+			},
+			"the":{
+				"meaning":{
+					"of":{
+						"life": "42"
+					}
+				},
+				"time" : ["function", "showTime"],
+				"date" : ["function", "showDate"]
+			}
+		},
+		"time" : {
+			"is" : {
+				"it" : ["function", "showTime"]
+			}
+		},
+		"date" : {
+			"is" : {
+				"it" : ["function", "showDate"]
+			}
+		},
+		"do" : {
+			"you" : {
+				"fear" : "I fear NOTHING.",
+				"eat" : "The souls of Internet Explorer users."
+			}
+		}
+	},
+	"when":{
+		"is" : {
+			"breakfast" : "When you first shove food into your face in the morning.",
+			"lunch" : "Depends on who you are asking.",
+			"dinner" : "You probably want to talk to Rebecca about that."
+		}
+	},
+	"where":{
+		"is":{
+			"matt" : "Have you tried checking his calendar?",
+			"the":{
+				"bathroom" : "Honestly... if you don't know that I cannot help you.",
+				"elevator" : "How did you get up here if you don't know the answer to that question"
+			},
+			"neha" : "Probably right in front of Matt.",
+			"san" : {
+				"francisco" : "It's in California."
+			},
+			"philadelphia" : "It's in Pennsylvania.",
+			"your" : {
+				"mother" : "Nowhere you need to be concerned about."
+			}
+		},
+		"are" : {
+			"your" : {
+				"priorities" : "Right where they need to be, thank you very much."
+			}
+		}
+	},
+	"who":{
+		"is":{
+			"barry" : "If you receive a paycheck from LOYAL3, you should know better than to ask that question.",
+			"cassie" : "The Queen Bee.",
+			"chris" : "A really nice guy who just happens to be from Jersey... don't hold that against him.",
+			"matt" : "Think Telly Savalas but younger... and with plugs.",
+			"ben" : "All that is design and ever will be.",
+			"roman" : "I find myself asking that same question quite often.",
+			"sophia" : "Remember the television show 'That Girl' in the late 60's? Yeah, that's Sophia.",
+			"henry" : "If you've ever seen the Diesel Jeans logo, then you know who Henry is.",
+			"your":{
+				"mother" : "What would possess you to ask such a question?"
+			}
+		}
+	},
+	"why":{
+		"am":{
+			"i":{
+				"here" : "Why are any of us here?"
+			}
+		}
+
+	}
+}
