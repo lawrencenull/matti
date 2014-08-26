@@ -3,8 +3,6 @@ Matti
 
 A semi-intelligent personal assistant written in Javascript
 
-![Alt text](http://mtorbin.github.io/img/spotify_alfred_artist_search.png "Spotify window open")
-
 # Table of Contents
 1. Description
 
